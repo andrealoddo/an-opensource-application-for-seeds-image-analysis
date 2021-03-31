@@ -1,0 +1,50 @@
+This is BibTeX, Version 0.99d
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: main.aux
+Reallocating 'name_of_file' (item size: 1) to 15 items.
+The style file: elsarticle-num.bst
+Reallocating 'name_of_file' (item size: 1) to 4 items.
+Database file #1: bib.bib
+Warning--empty year in Landini
+You've used 15 entries,
+            2952 wiz_defined-function locations,
+            780 strings with 8417 characters,
+and the built_in function-call counts, 4907 in all, are:
+= -- 420
+> -- 215
+< -- 3
++ -- 81
+- -- 66
+* -- 361
+:= -- 694
+add.period$ -- 17
+call.type$ -- 15
+change.case$ -- 13
+chr.to.int$ -- 0
+cite$ -- 16
+duplicate$ -- 148
+empty$ -- 538
+format.name$ -- 81
+if$ -- 1252
+int.to.chr$ -- 0
+int.to.str$ -- 15
+missing$ -- 14
+newline$ -- 55
+num.names$ -- 18
+pop$ -- 112
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 298
+stack$ -- 0
+substring$ -- 256
+swap$ -- 34
+text.length$ -- 3
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 1
+while$ -- 33
+width$ -- 17
+write$ -- 130
+(There was 1 warning)

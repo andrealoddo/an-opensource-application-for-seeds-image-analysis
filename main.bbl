@@ -1,0 +1,87 @@
+\begin{thebibliography}{10}
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{\texttt{#1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+\expandafter\ifx\csname href\endcsname\relax
+  \def\href#1#2{#2} \def\path#1{#1}\fi
+
+\bibitem{Dirub_2015}
+C.~Di~Ruberto, G.~Fodde, L.~Putzu, Comparison of statistical features for
+  medical colour image classification, in: L.~Nalpantidis, V.~Kr{\"u}ger, J.-O.
+  Eklundh, A.~Gasteratos (Eds.), Computer Vision Systems, Springer
+  International Publishing, Cham, 2015, pp. 3--13.
+
+\bibitem{Dirub_2020}
+C.~{Di Ruberto}, A.~Loddo, L.~Putzu, Detection of red and white blood cells
+  from microscopic blood images using a region proposal approach, Computers in
+  Biology and Medicine 116 (2020) 103530.
+
+\bibitem{ImageJ}
+\url{https://imagej.net/ImageJ} (2021).
+
+\bibitem{Gonz_2018}
+R.~Gonzales, R.~Woods, Digital Image Processing, Pearson, 2018.
+
+\bibitem{Dirub_2009}
+C.~Di~Ruberto, L.~Cinque, Decomposition of two-dimensional shapes for efficient
+  retrieval, Image Vision Comput. 27~(8) (2009) 1097–1107.
+
+\bibitem{Ucc2016}
+M.~Ucchesu, M.~Orr{\`{u}}, O.~Grillo, G.~Venora, G.~Paglietti, A.~Ardu,
+  G.~Bacchetta, Predictive method for correct identification of archaeological
+  charred grape seeds: Support for advances in knowledge of grape domestication
+  process, PLoS ONE 11~(2) (2016).
+
+\bibitem{Ucc2015}
+M.~Ucchesu, M.~Orr{\`{u}}, O.~Grillo, G.~Venora, A.~Usai, P.~F. Serreli,
+  G.~Bacchetta, {Earliest evidence of a primitive cultivar of Vitis vinifera L.
+  during the Bronze Age in Sardinia (Italy)}, Vegetation History and
+  Archaeobotany 24~(5) (2015) 587--600.
+
+\bibitem{Sabato2015}
+D.~Sabato, C.~Esteras, O.~Grillo, B.~Picó, G.~Bacchetta, Seeds
+  morpho-colourimetric analysis as complementary method to molecular
+  characterization of melon diversity, Scientia Horticulturae 192 (2015) 441 --
+  452.
+
+\bibitem{Orru2012}
+M.~Orrù, O.~Grillo, G.~Venora, G.~Bacchetta, Computer vision as a method
+  complementary to molecular analysis: Grapevine cultivar seeds case study,
+  Comptes Rendus Biologies 335~(9) (2012) 602 -- 615.
+
+\bibitem{LoBianco2015}
+M.~L. Bianco, O.~Grillo, R.~Cremonini, M.~Sarigu, V.~Venora, Characterisation
+  of italian bean landraces ('phaseolus vulgaris' l.) using seed image analysis
+  and texture descriptors, Australian Journal of Crop Science 9 (2015)
+  1022--1034.
+
+\bibitem{Loddo20}
+A.~M. P.~G. Vale, M.~Ucchesu, C.~D. Ruberto, A.~Loddo, J.~M. Soares,
+  G.~Bacchetta, A new automatic approach to seed image analysis: From
+  acquisition to segmentation (2020).
+\newblock \href {http://arxiv.org/abs/2012.06414} {\path{arXiv:2012.06414}}.
+
+\bibitem{Landini}
+G.~Landini, Advanced shape analysis with imagej, in: 2th ImageJ user and
+  developer Conference, 7-8 November 2008, Luxembourg, pp. 6--7.
+
+\bibitem{Haralick73}
+R.~M. {Haralick}, K.~{Shanmugam}, I.~{Dinstein}, Textural features for image
+  classification, IEEE Transactions on Systems, Man, and Cybernetics SMC-3~(6)
+  (1973) 610--621.
+\newblock \href {https://doi.org/10.1109/TSMC.1973.4309314}
+  {\path{doi:10.1109/TSMC.1973.4309314}}.
+
+\bibitem{Weka}
+M.~Hall, E.~Frank, G.~Holmes, B.~Pfahringer, P.~Reutemann, I.~H. Witten, The
+  {WEKA} data mining software: an update, SIGKDD Explorations 11~(1) (2009)
+  10--18.
+
+\bibitem{Alejo2013}
+R.~Alejo, J.~A. Antonio, R.~M. Valdovinos, J.~H. Pacheco-S{\'a}nchez,
+  Assessments metrics for multi-class imbalance learning: A preliminary study,
+  in: J.~A. Carrasco-Ochoa, J.~F. Mart{\'i}nez-Trinidad, J.~S. Rodr{\'i}guez,
+  G.~S. di~Baja (Eds.), Pattern Recognition, Springer Berlin Heidelberg,
+  Berlin, Heidelberg, 2013, pp. 335--343.
+
+\end{thebibliography}

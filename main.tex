@@ -4,8 +4,23 @@
 \input{header}
 
 \title{An effective and friendly tool for seed image analysis}
-\author{Andrea, Alessandra, Mariano, Cecilia, Bacchetta}
-%\date{date ../../....}
+
+%% Group authors per affiliation:
+\author[1]{Loddo A. \footnote{Corresponding author: Andrea Loddo (andrea.loddo@unica.it)} }
+\author[1]{Di Ruberto C.}
+\author[2]{Vale A.M.P.G.}
+\author[3]{Ucchesu M.}
+\author[4]{Soares J.M.}
+\author[3,5]{Bacchetta G.}
+
+\affil[1]{Department of Mathematics and Computer Science, University of Cagliari, via Ospedale 72, 09124 Cagliari.}
+\affil[2]{Escola Agrícola de Jundiaí (EAJ), Universidade Federal do Rio Grande do Norte (UFRN), Rodovia RN 160, Km 03, CEP 59280-000 Macaíba (RN), Brasil.}
+\affil[3]{Centro Conservazione Biodiversità (CCB), Dipartimento di Scienze della Vita e dell’Ambiente (DiSVA), Università degli Studi di Cagliari, Viale S. Ignazio da Laconi 13, 09123 Cagliari, Italy.}
+\affil[4]{Universidade Federal do Rio Grande do Norte (UFRN), Rodovia RN 160, Km 03, CEP 59280-000 Macaíba (RN), Brasil.}
+\affil[5]{Hortus Botanicus Karalitanus (HBK), Università degli Studi di Cagliari, Viale S. Ignazio da Laconi 11, 09123 Cagliari, Italy.}
+
+
+%\fntext[myfootnote]{}
 
 \begin{document}
 
@@ -46,7 +61,7 @@ Next, we applied a preprocessing procedure.
 In particular, the collectors acquired these seeds' images on different backgrounds of various shades of blue. Consequently, it helps us to find the best images to extract crops of single seeds to classify. Figure \ref{Sardinia} shows two sample images from the \emph{Fabaceae} database.
 
 \begin{figure}[tbp]
-	\centerline{\includegraphics[scale=0.5]{Img/Sardinia.png}}
+	\centerline{\includegraphics[scale=0.5]{Img/Sardinia.jpg}}
 	\caption{Examples of seeds images present in the \emph{Fabaceae} dataset.}
 	\label{Sardinia}
 \end{figure}
@@ -59,7 +74,7 @@ The interface of ImageJ is straightforward and intuitive even for people without
 Basically, the software is condensed in its menu bar that contains all the options, as shown in Figure \ref{ImageJ_Interf}.
 
 \begin{figure}[!t]
-	\centerline{\includegraphics[scale=0.37]{Img/Fig1.eps}}
+	\centerline{\includegraphics[scale=0.37]{Img/Fig1.pdf}}
 	\caption{ImageJ main interface.}
 	\label{ImageJ_Interf}
 \end{figure}
@@ -96,14 +111,14 @@ From the \emph{Fabaceae} dataset, we selected the images containing the most num
 We discarded some species due to the low sharpness and too small size of the seeds. Figures \ref{Sardinia_Masks} and \ref{Sardinia_Crops} show an original sample image with its derived binary mask and some seed images extracted from it, respectively. 
 \begin{figure}[tbp]
 	\centering
-	\includegraphics[scale=0.6]{Img/SardiniaMasks.png}
+	\includegraphics[scale=0.6]{Img/SardiniaMasks.jpg}
 	\caption{Example of an image from the \emph{Fabaceae} database and its derived binary mask.}
 	\label{Sardinia_Masks}
 \end{figure}
 
 \begin{figure}[tbp]
 	\centering
-	\includegraphics[scale=0.4]{Img/Sardinia_crops.png}
+	\includegraphics[scale=0.4]{Img/Sardinia_crops.jpg}
 	\caption{Some examples of seed images extracted from the image of Figure \ref{Sardinia_Masks} of the \emph{Fabaceae} database.}
 	\label{Sardinia_Crops}
 \end{figure}
@@ -113,7 +128,7 @@ Finally, the users can choose the features of interest from the "Feature" window
 
 \begin{figure}[htbp]
 \centering
-\includegraphics[height=0.35\textheight]{Img/f3_features_selection.png}
+\includegraphics[height=0.35\textheight]{Img/f3_features_selection.jpg}
 \caption{\label{fig:features_selection}Window for feature selection.}
 \end{figure}
 
