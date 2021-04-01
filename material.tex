@@ -1,0 +1,55 @@
+\section{Material and Methods}
+The analysis of seeds for different purposes is one of the possible biological-image analysis processes. For example, analysis of seed fossils can provide important information about their evolution, agriculture origin, the process of domestication and knowledge of diets in ancient times. Usually, such fossils are preserved through a process of carbonization in order to avoid microbial attacks.
+In \cite{Ucc2016} Ucchesu et al. carried out different carbonization experiments to reproduce the same conditions of burning of archaeological contexts in order to compare some seeds present in Sardinia, Italy, today with the presumed archaeological fossils and so classify them.
+In \cite{Ucc2015} Ucchesu et al. performed a morphological comparison between archaeological seeds and recent wild seeds. This work showed how the archaeological seeds have significantly similar features compared to modern ones. Sabato et al. \cite{Sabato2015} analyzed genetic, morphological and colourimetric differences of 124 types of \emph{Cucumismelo} seed, belonging to 48 different countries. The morpho-colourimetric analysis detected two subspecies of melons, also identifying six different varieties. The work of Orr\'u et al. \cite{Orru2012} represents, instead, the first attempt to validate a morpho-colourimetric method through a direct comparison with the molecular data of the germinal plasma, showing that the 113 proposed features are adequate to discriminate similar groups. Lo Bianco et al. \cite{LoBianco2015} identified 67 different types of Italian beans (\emph{Phaseolusvulgaris L}) using morphological features. A total of 138 descriptors, including shape and texture, have been extracted from each seed using image analysis techniques. Through \emph{Linear Discriminant Analysis} \cite{Gonz_2018}, the authors performed a comparative analysis to verify the possibility of distinguishing between seeds of the same land but cultivated with different agricultural practices. Initially, it was possible to discriminate three categories of the main seeds with an accuracy of 99.1\%. Furthermore, for each of these three categories, the cultivation land has been identified with an accuracy between 94.3\% and 99.7\%.
+
+\subsection{Dataset description}
+For this study, we used an image database containing 3,386 samples of 120 plant species belonging to the \emph{Fabaceae} family.
+We chose the \emph{Fabaceae} family because it is one of the most prominent families and shows significant variability in their seeds' size and colour. 
+All samples come from the base collection in the Germplasm Bank of Sardinia (BG-SAR), University of Cagliari, Italy.
+During the acquisition, the operators arranged the seeds on the flatbed scanner, separating them from each other in order to avoid overlapping. Then the area occupied by the seeds has been covered with a tray lined with a blue background for the digital image, as shown in Figure \ref{Acquisition}. The acquisition process used a minimum resolution of 400 dpi and the resulting image saved in the Joint Photographic Experts Group (Jpeg) format with a resolution of $2125\times2834$ \cite{Loddo20}.
+
+\begin{figure}[tbp]
+	\centerline{\includegraphics[scale=0.25]{Acquisition.jpg}}
+	\caption{Seeds acquisition on the flatbed scanner for the \emph{Fabaceae} dataset.}
+	\label{Acquisition}
+\end{figure}
+
+For the classification task, we selected the more numerous species.
+Next, we applied a preprocessing procedure. 
+In particular, the collectors acquired these seeds' images on different backgrounds of various shades of blue. Consequently, it helps us to find the best images to extract crops of single seeds to classify. Figure \ref{Sardinia} shows two sample images from the \emph{Fabaceae} database.
+
+\begin{figure}[tbp]
+	\centerline{\includegraphics[scale=0.5]{Sardinia.jpg}}
+	\caption{Examples of seeds images present in the \emph{Fabaceae} dataset.}
+	\label{Sardinia}
+\end{figure}
+
+\subsection{ImageJ platform}
+ImageJ \cite{ImageJ} is open-source software for digital image processing, designed initially by Wayne Rasband from the National Institute of Health of the United States. It is written in Java language, and it runs as an online applet or offline with an installed Java Virtual Machine (JVM). The source code is publicly available and open to new contributions for the ImageJ community. ImageJ allows viewing, analyzing, modifying, processing, saving, printing grayscale images (8-bit, 16-bit, and 32-bit) and color images (8-bit and 24-bit); the supported formats are TIFF, JPEG, GIF, BMP, DICOM, FITS, and RAW. It was designed with an open architecture extendable with two kinds of extension, \emph{Java plugins}, and recordable \emph{macros}. Most of the existing plugins already permit to face some image processing and analysis issues.
+ImageJ allows the extraction of Region of Interest (ROI) pixel-wise or object-segmented statistics. It is also possible to measure distances and angles, generate and visualize intensity histograms and draw profile lines (between defined points). ImageJ supports many standard image processing transformations, such as logical and arithmetic operations between images, brightness and contrast adjustment, convolution, Fourier analysis, smoothing, contour detection, median filtering, and mathematical morphology \cite{Gonz_2018}. It is also possible to perform geometric transformations such as scaling, rotation, and reflection.
+
+The interface of ImageJ is straightforward and intuitive even for people without advanced computer and image analysis skills. 
+Basically, the software is condensed in its menu bar that contains all the options, as shown in Figure \ref{ImageJ_Interf}.
+
+\begin{figure}[!t]
+	\centerline{\includegraphics[scale=0.37]{Fig1.pdf}}
+	\caption{ImageJ main interface.}
+	\label{ImageJ_Interf}
+\end{figure}
+Basic operations, like file opening or simple editing options (File and Edit options) and more complex ones, such as segmentation operations, image enhancement, noise reduction, object counting, filtering, and other options ("Image," "Process," "Analyze" and "Plugins"), are accessible from the main menu.
+Moreover, the toolbar contains several options to select regions or shapes in the image. 
+The status bar shows the current pixel's coordinates and values when the cursor is over the image. Simultaneously, whether a filter operation is performed on the image, the status bar displays the execution time and the processing speed in $pixels / second$.
+The progress bar, shown on the right-hand side of the status bar, shows the processing progress.
+
+ImageJ allows an extension of its functionalities through additional components, like plugins and macros. The plugins require Java language, while macros require Java-like language. Plugins are generally faster and more flexible; on the other hand, macros are simpler to write and debug, but they are heavier than the plugins computationally. It is the main reason that led plugins to play a fundamental role in functionality extensions and ImageJ itself since it implements a large part of its functionality with internal plugins.
+
+\subsubsection{ImageJ's logical structure}
+ImageJ presents a very extensive and complex class diagram.
+\emph{IJ} is the main class of the framework: any processing starts from it, and consequently, all the other classes extend it or are part of \emph{ij}.* package. It takes an image in input and returns an object of the \emph{ImagePlus} type, ready for its analysis.
+The created \emph{ImagePlus} object contains an object of the abstract \emph{ImageProcessor} class, which stores image data in 2D and provides methods for processing.
+The \emph{GenericDialog} and \emph{ResultsTable} classes respectively manage input and output data. The first one allows the user to specify preferences and select options via several checkboxes, text boxes, and lists, while the second one shows the output results in tabular form. Moreover, the \emph{ROI} class permits the processing of an image's objects.
+This class includes several parameters and methods and is often associated with an object of type \emph{ImageStatistics} that consists of a series of measurements calculated on the ROI. The \emph{ROI} class uses the classes\emph{Polygon Java } and its subclasses to determine the points which constitute an area of interest. The \emph{Analyzer} class returns an object based on particular options that analyze the image. An object of type \emph{ParticleAnalyzer} works in the same manner even though it analyses all the regions in an image one-by-one rather than the whole image. 
+The class \emph{Histogram} provides an image histogram on a ROI. 
+\emph{ChannelSplitter} returns a vector containing three \emph{ImagePlus}, each one corresponding to a single RGB (Red, Green, Blue) channels.
+In the next section, we detail our proposed plugin structure, based on the \emph{ParticleAnalyzer}'s logical structure.

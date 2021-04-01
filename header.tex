@@ -1,24 +1,5 @@
-%header
-
-%ABNT Packages
-\usepackage[utf8]{inputenc}
-\usepackage[lmargin=3cm,tmargin=3cm,rmargin=2cm,bmargin=2cm]{geometry}
-\usepackage[onehalfspacing]{setspace}
-\usepackage[T1]{fontenc}
-%\usepackage[brazil]{babel}
-
-% Keywords command
-\providecommand{\keywords}[1]
-{
-  \small	
-  \textbf{\textit{Keywords---}} #1
-}
-
 %Essential Packages
 \usepackage{graphicx,xcolor,comment,enumerate,multirow,multicol,indentfirst}
-
-%Math Packages
-\usepackage{amsmath,amsthm,amsfonts,amssymb,dsfont,mathtools,blindtext}
 
 \usepackage{soul}
 \usepackage{textcomp} 
@@ -31,3 +12,8 @@
 
 
 \usepackage{authblk}
+
+\smartqed  % flush right qed marks, e.g. at end of proof
+
+\RequirePackage{fix-cm}
+\usepackage{natbib}
