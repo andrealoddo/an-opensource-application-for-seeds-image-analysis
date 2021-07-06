@@ -1,0 +1,92 @@
+\documentclass[]{article}
+
+%opening
+\title{Response to Comments}
+\author{Andrea Loddo, Cecilia Di Ruberto, Mauro Loddo}
+
+\begin{document}
+	
+	\maketitle
+	
+	We thank the associate editor and reviewers for their constructive comments. 
+	We have revised the manuscript according to the suggestions.
+	For ease of review, we add a differences PDF file that shows the differences between the original manuscript and the revised version.
+	We summarise the major changes below:
+	\\
+	\begin{enumerate}
+		%
+		\item We completely reorganised the structure of the manuscript, according to COMPAG guidelines. \\
+		\item We removed unnecessary figures, as detailed in the following responses, and updated some figures to provide higher quality and improved descriptions. \\
+		\item We added the list of contributions in the Introduction. \\
+		\item We highlight the main differences with our first submission.\\
+		%
+	\end{enumerate}
+	
+	\section{Editor}
+	\textbf{Whenever possible, please add relevant references from The Visual Computer. It is important to cite related work from the journal you are publishing in.} \\
+	
+	
+	
+
+	
+	\section{Reviewer 1}
+	There are not major concerns in the paper. I only suggest two slight modification to improve the work:
+	\begin{enumerate}
+		\item \textbf{The authors should insert a contribution list at the end of the Introduction so to highlight the real novelties of the papers. According to this, i think the authors should highlight that a DL benchmark is proposed, so to attract more interest in the research community. Also, i would highlight this in the title.} \\
+		
+		In the introduction section, we added more details regarding our Deep Learning approach and benchmark. Moreover, we list all the main contributions of our work.  We have also reorganised Sec.3 in order to highlight the deep learning approach and the extensive DL benchmark proposed.
+		
+		\item \textbf{A revise of the paper is suggested. Some typos are detected and the writing grammar is quite shallow.} \\
+	\end{enumerate}
+	
+	We completely revised the English language and corrected the typos.
+	
+	\section{Reviewer 2}
+	There are not major concerns in the paper. I only suggest two slight modification to improve the work:
+	\begin{enumerate}
+		\item \textbf{This topic fits the scope of COMPAG, and the content is interesting. However, the paper needs major improvements in writing and organising. The essential criterion of scientific publication should be followed, such as avoiding using first-person too often or redundant descriptions. } \\
+		
+		First-person has been removed as much as possible throughout all the manuscript and the redundant descriptions, too.
+		
+		\item \textbf{I do suggest the author go through the manuscript thoroughly and carefully check the way of expression. The bottom line is to have the story expressed logically, comprehensively, and concisely. Please reformat the manuscript according to the author's guidelines of the target journal before submission. For COMPAG, the Introduction, methods, and results should be illustrated separately. Some captions of figures and tables are too simple.} \\
+		
+		We completely reformatted and reorganised the manuscript, carefully following the COMPAG guidelines. In particular, we organised it with (i) the Introduction section, which introduces the issue and overviews state of the art; (ii) the Materials and Methods section, in which we describe SeedNet, our proposed CNN architecture, the two exploited dataset, and the related preprocessing step; (iii) the Results and discussion section, in which we describe the \textbf{Setup} of all the classification and retrieval experiments, and the metrics used to evaluate the results; the \textbf{Results} of both tasks, the \textbf{Deep learning vs traditional machine learning comparison}, and, finally, we give a complete \textbf{Discussion} of all the obtained results.
+	
+		\item \textbf{Revision needs to make and not limited to:\\
+			L52-109 Methodology is to illustrate what you did. If not, this should belong to the Introduction. Besides, I suggest the author reorganised the introduction part.}
+		
+		We reorganised the Introduction. Now, we introduce the faced issue and then depict the state-of-the-art contributions in this field of study.
+		
+		\item \textbf{L193 Consider combining these to images. Figure 7 is potentially a redundant content of Figure 6 or 9}
+		
+		We combined previous Fig. 7 into Fig. 6. We now have an only image (Fig. 6) that shows a sample of the local dataset, its related binary mask, and some crop samples.
+		
+		
+		\item \textbf{L239 Table 1. I guess this is the layers in sequence? If so, I suggest having another column for Layer \#.}
+		
+		A new column has been added in Table 1 for Layer \#.
+		
+		
+		\item \textbf{L245 Figure 8. Text is too small to read.}
+		
+		We modified the figure by removing the text inside the images and adding it as a subcaption for both figures representing crop samples of the datasets classes (Now: Fig. 7 and 8).
+		
+		\item \textbf{L316-340 Large amounts of contents are background introduction and Methodology. Also, consider moving some contents into the introduction section as justification.}
+		
+		We moved the information at L316-340, after the reorganisation. We now give some details about the methods and pinpoint the objectives of our comparison in Sec.3.1 (Setup).
+		
+		\item \textbf{L351 Table 8. To me, the result of classic approaches is not bad. As you mentioned the time-consuming of DL approaches in Table 3, I'm curious about the performance of the traditional machine learning approaches on time consumption. This could be an advantage of classic machine learning.}
+		
+		We added runtimes for traditional classifiers and added a discussion in 3.4:
+		\textit{Although the satisfactory results of traditional classifiers, no one outperformed SeedNet.
+		CNNs methods generally achieved better performances than the traditional classifiers, which nevertheless had training times less than or equal to a minute. Our proposed model also required 4 and 12 times the training time on the Canadian and local dataset, respectively, even though it outperformed every single compared CNN.
+		}
+		
+		\item \textbf{L376 Quite a few contents are discussions.}
+		
+		We reorganised and extended the discussion section in order to talk about the classification and retrieval results with the proposed network; then, we analysed the results obtained with the other CNNs, to make an exhaustive comparison for both tasks. Finally, we discussed the pros and cons of deep learning vs traditional machine learning methods.
+		
+	\end{enumerate}
+	
+	
+\end{document}
