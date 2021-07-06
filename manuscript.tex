@@ -4,7 +4,7 @@
 
 \input{header}
 
-\journalname{The Visual Computing}
+\journalname{The Visual Computer}
 
 \begin{document}
 
@@ -62,6 +62,9 @@ Instead of manual analysis, the use of image analysis techniques on seeds has th
 Image pre-processing techniques prepare the image before analysing it to delete possible distortions or superfluous data or highlight and improve certain important features for further processing. The next step is segmentation. It subdivides the significant regions into sets of pixels with common features such as colour, intensity, or texture. The segmentation objective is to simplify and change image representation into something more significant and easier to analyse. Features extraction from regions of interest identified by segmentation is the subsequent step. The feature can be shape, texture or color based \cite{Dirub_2015}, \cite{Dirub_2009}. The final step is classification, i.e. the association of a label with the object under examination using supervised or unsupervised machine learning methods. 
 The rest of the paper is organised as follows. The following section presents state of the art on seeds image analysis. Section 3 introduces the ImageJ environment used to implement our proposed plugin, described in Section 4. The experimental evaluation and the used dataset are discussed in Section 5, and, finally, in Section 6 we give the conclusions of the work.
 
+da citare (VC): \cite{Junos2021} \cite{Gajjar2021} \cite{Zhang2019} 
+Esempio di lavoro CAD su immagini biologiche: \cite{Ahmad2021}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Material and Methods}
@@ -76,7 +79,7 @@ All samples come from the base collection in the Germplasm Bank of Sardinia (BG-
 During the acquisition, the operators arranged the seeds on the flatbed scanner, separating them from each other in order to avoid overlapping. Then the area occupied by the seeds has been covered with a tray lined with a blue background for the digital image, as shown in Figure \ref{Acquisition}. The acquisition process used a minimum resolution of 400 dpi and the resulting image saved in the Joint Photographic Experts Group (Jpeg) format with a resolution of $2125\times2834$ \cite{Loddo20}.
 
 \begin{figure}[tbp]
-	\centerline{\includegraphics[scale=0.25]{Acquisition.jpg}}
+	\centerline{\includegraphics[scale=0.25]{fig_acquisition.jpg}}
 	\caption{Seeds acquisition on the flatbed scanner for the \emph{Fabaceae} dataset.}
 	\label{Acquisition}
 \end{figure}
@@ -86,7 +89,7 @@ Next, we applied a preprocessing procedure.
 In particular, the collectors acquired these seeds' images on different backgrounds of various shades of blue. Consequently, it helps us to find the best images to extract crops of single seeds to classify. Figure \ref{Sardinia} shows two sample images from the \emph{Fabaceae} database.
 
 \begin{figure}[tbp]
-	\centerline{\includegraphics[scale=0.5]{Sardinia.jpg}}
+	\centerline{\includegraphics[scale=0.5]{fig_sardinia.jpg}}
 	\caption{Examples of seeds images present in the \emph{Fabaceae} dataset.}
 	\label{Sardinia}
 \end{figure}
@@ -138,14 +141,14 @@ From the \emph{Fabaceae} dataset, we selected the images containing the most num
 We discarded some species due to the low sharpness and too small size of the seeds. Figures \ref{Sardinia_Masks} and \ref{Sardinia_Crops} show an original sample image with its derived binary mask and some seed images extracted from it, respectively. 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[scale=0.6]{SardiniaMasks.jpg}
+	\includegraphics[scale=0.6]{fig_sardiniaMasks.jpg}
 	\caption{Example of an image from the \emph{Fabaceae} database and its derived binary mask.}
 	\label{Sardinia_Masks}
 \end{figure}
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[scale=0.4]{Sardinia_crops.jpg}
+	\includegraphics[scale=0.4]{fig_sardiniaCrops.jpg}
 	\caption{Some examples of seed images extracted from the image of Figure \ref{Sardinia_Masks} of the \emph{Fabaceae} database.}
 	\label{Sardinia_Crops}
 \end{figure}
@@ -155,7 +158,7 @@ Finally, the users can choose the features of interest from the "Feature" window
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[height=0.35\textheight]{Features_selection.jpg}
+	\includegraphics[height=0.35\textheight]{fig_featureSel.jpg}
 	\caption{\label{fig:features_selection}Window for feature selection.}
 \end{figure}
 
@@ -289,7 +292,7 @@ A sample of each species is shown in Figure \ref{Sardinia_samples}, while Table 
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[scale=0.65]{Sardinia_samples.jpg}
+	\includegraphics[scale=0.65]{fig_sardiniaSamples.jpg}
 	\caption{A sample of seed for each species present in the \emph{Fabaceae} dataset.}
 	\label{Sardinia_samples}
 \end{figure}
